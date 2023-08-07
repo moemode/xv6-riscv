@@ -1,0 +1,6 @@
+{
+    // Controls whether to use global `.gitignore` and `.ignore` files when searching for files.
+    "search.useGlobalIgnoreFiles": false,
+    // Controls whether to use `.gitignore` and `.ignore` files when searching for files.
+    "search.useIgnoreFiles": false,
+}

@@ -11,7 +11,24 @@
             //"miDebuggerServerAddress": "127.0.0.1:26000",
             "miDebuggerPath": "/usr/bin/gdb-multiarch", // which gdb-multiarch
             "MIMode": "gdb",
-            "preLaunchTask": "xv6build",
+            "preLaunchTask": "xv6 qemu-gdb",
+            "postRemoteConnectCommands": [
+                {
+                    "text": "source ${workspaceFolder}/.gdbinit"
+                }
+            ]
+        },
+        {
+            "name": "xv6debug 1 CPU",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/kernel/kernel",
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            //"miDebuggerServerAddress": "127.0.0.1:26000",
+            "miDebuggerPath": "/usr/bin/gdb-multiarch", // which gdb-multiarch
+            "MIMode": "gdb",
+            "preLaunchTask": "xv6 qemu-gdb 1 CPU",
             "postRemoteConnectCommands": [
                 {
                     "text": "source ${workspaceFolder}/.gdbinit"

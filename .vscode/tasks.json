@@ -2,10 +2,32 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "xv6build",
+            "label": "xv6 qemu-gdb",
             "type": "shell",
             "isBackground": true,
             "command": "make qemu-gdb",
+            "problemMatcher": [
+                {
+                    "pattern": [
+                        {
+                            "regexp": ".",
+                            "file": 1,
+                            "location": 2,
+                            "message": 3
+                        }
+                    ],
+                    "background": {
+                        "beginsPattern": ".*Now run 'gdb' in another window.",
+                        "endsPattern": "."
+                    }
+                }
+            ]
+        },
+        {
+            "label": "xv6 qemu-gdb 1 CPU",
+            "type": "shell",
+            "isBackground": true,
+            "command": "make CPUS=1 qemu-gdb",
             "problemMatcher": [
                 {
                     "pattern": [
