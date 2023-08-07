@@ -9,7 +9,7 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             //"miDebuggerServerAddress": "127.0.0.1:26000",
-            "miDebuggerPath": "/usr/bin/gdb-multiarch", // which gdb-multiarch
+            "miDebuggerPath": "/usr/local/bin/riscv64-unknown-elf-gdb", // which riscv64-unknown-elf-gdb
             "MIMode": "gdb",
             "preLaunchTask": "xv6 qemu-gdb",
             "postRemoteConnectCommands": [
@@ -26,7 +26,7 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             //"miDebuggerServerAddress": "127.0.0.1:26000",
-            "miDebuggerPath": "/usr/bin/gdb-multiarch", // which gdb-multiarch
+            "miDebuggerPath": "/usr/local/bin/riscv64-unknown-elf-gdb", // which riscv64-unknown-elf-gdb
             "MIMode": "gdb",
             "preLaunchTask": "xv6 qemu-gdb 1 CPU",
             "postRemoteConnectCommands": [
